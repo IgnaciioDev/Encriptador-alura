@@ -24,14 +24,42 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section class="section">
-            <div class="texto-encriptador">
-                <h2>Encriptador Alura</h2>
-                <!-- <div class="inputBox">
-                    <textarea  class="input-texto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-                </div> -->
+    <main class="main">
+        <section class="main__section main__section--left">
+            <div class="shadow-box">
+                <div class="text-box">
+                    <h2 class="text-box__title">Encriptador alura</h2>
+                    <div class="input-box">
+                        <textarea class="input-box__textarea" cols="20" rows="8" 
+                        placeholder="Ingrese el texto aqui"></textarea>
+    
+                    </div>
+                    
+                </div>
+                <div class="button-box">
+                    <button class="button-box__button button-box__button--encrypt" 
+                    type="button" onclick="botonEncriptar()">Encriptar</button>
+                    <button class="button-box__button button-box__button--decrypt" 
+                    type="button" onclick="botonDesencriptar()">Desencriptar</button>
+                </div>
+    
             </div>
+        </section>
+    
+        <section class="main__section main__section--right">
+            <div class="shadow-box">
+                <div class="text-box">
+                    <h2 class="text-box__title">Resultado</h2>
+                    
+                    <textarea class="text-box__textarea" cols="30" rows="10" placeholder="Ningun mensaje fue encontrado"></textarea>
+                    
+                </div>
+    
+                <div class="button-box">
+                    <button class="button-box__button button-box__button--copy" type="button" onclick="copiar()">Copiar</button>
+                </div>
+            </div>
+            
         </section>
     </main>
 </body>

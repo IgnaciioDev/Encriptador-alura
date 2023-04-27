@@ -85,7 +85,7 @@ a {
 }
 
 .shadow-box {
-    background-color: var(--medioblanco);
+    background-color: var(--blanco);
     box-shadow: -1px 6px 10px 0px rgba(0,0,0,0.7);
     /* padding: 1rem; */
     border-radius: 1rem;
@@ -99,6 +99,13 @@ a {
     font-size: 3rem;
 }
 
+.text-box__title {
+    text-align: center;
+    margin-top: 1rem;
+    /* height: 50rem; */
+    font-family: var(--font-primary);
+    font-size: 3rem;
+}
 
 /* SECTION RIGHT */
 

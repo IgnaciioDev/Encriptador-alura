@@ -79,7 +79,7 @@ a {
     .main {
         display: grid;
         grid-template-columns: 60% 40%;
-        column-gap: 6rem;
+        /* column-gap: 6rem; */
         height: 72rem;
     }
 }

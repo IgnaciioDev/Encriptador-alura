@@ -7,16 +7,18 @@
     <title>Encriptador</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header class="header">
-        <img class="logo"  src="./img/Logo.svg" alt="Logo" title="Logo">
+        <img class="logo" src="./img/Logo.svg" alt="Logo" title="Logo">
         <h1>Encriptador Alura Challenge</h1>
         <nav>
             <a href="#" title="Linkedin">Linkedin</a>
@@ -26,41 +28,44 @@
 
     <main class="main container">
         <section class="main__section">
-            <div class="shadow-box">
-                <div class="text-box">
-                    <h2 class="text-box__title">Encriptador alura</h2>
-                    <div class="input-box">
-                        <textarea class="input-box__textarea" cols="20" rows="8" 
-                        placeholder="Ingrese el texto aqui"></textarea>
-    
-                    </div>
-                    
+
+            <div class="text-box">
+                <h2 class="text-box__title">Encriptador alura</h2>
+                <div class="input-box">
+                    <textarea class="input-box__textarea" cols="20" rows="8"
+                        placeholder="Ingrese el texto aqui">
+                    </textarea>
                 </div>
-                <div class="button-box">
-                    <button class="button-box__button" 
-                    type="button" onclick="botonEncriptar()">Encriptar</button>
-                    <button class="button-box__button" 
-                    type="button" onclick="botonDesencriptar()">Desencriptar</button>
-                </div>
-    
+
             </div>
+            <div class="button-box">
+                <button class="button-box__button" type="button" 
+                    onclick="botonEncriptar()">Encriptar
+                </button>
+                <button class="button-box__button" type="button" 
+                    onclick="botonDesencriptar()">Desencriptar
+                </button>
+            </div>
+
         </section>
-    
+
         <section class="main__section">
-            <div class="shadow-box">
-                <div class="text-box">
-                    <h2 class="text-box__title">Resultado</h2>
-                    
-                    <textarea class="input-box__textarea" cols="30" rows="10" placeholder="Ningun mensaje fue encontrado"></textarea>
-                    
-                </div>
-    
-                <div class="button-box">
-                    <button class="button-box__button button-box__button--copy" type="button" onclick="copiar()">Copiar</button>
-                </div>
+            <div class="text-box">
+                <h2 class="text-box__title">Resultado</h2>
+
+                <textarea class="input-box__textarea" cols="30" rows="10"
+                    placeholder="Ningun mensaje fue encontrado">
+                </textarea>
             </div>
-            
+
+            <div class="button-box">
+                <button class="button-box__button button-box__button--copy" type="button"
+                    onclick="copiar()">Copiar
+                </button>
+            </div>
         </section>
+
     </main>
 </body>
+
 </html>

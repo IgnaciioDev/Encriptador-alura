@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    min-height: 100vh;
+    min-height: 96.80vh;
     margin: 0 auto;
     background-image: linear-gradient(80deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     background-repeat: no-repeat;
@@ -38,8 +38,8 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .logo {
@@ -73,6 +73,9 @@ a {
     display: grid;
     width: 90%;
     margin-top: 2rem;
+    background-color: var(--blanco);
+    box-shadow: -1px 6px 10px 0px rgba(0,0,0,0.7);
+    border-radius: 1rem;
 }
 
 @media (min-width: 768px ) {
@@ -81,15 +84,10 @@ a {
         grid-template-columns: 60% 40%;
         /* column-gap: 6rem; */
         height: 72rem;
+        margin-top: 6rem;
     }
 }
 
-.shadow-box {
-    background-color: var(--blanco);
-    box-shadow: -1px 6px 10px 0px rgba(0,0,0,0.7);
-    /* padding: 1rem; */
-    border-radius: 1rem;
-}
 
 .text-box {
     text-align: center;
@@ -119,7 +117,7 @@ a {
 .button-box {
     text-align: center;
     font-family: var(--font-primary);
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
 }
 
 .button-box__button {

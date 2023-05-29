@@ -42,6 +42,12 @@ body {
     margin-bottom: 3rem;
 }
 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
 .logo {
     width: 5%;
 }
@@ -95,8 +101,8 @@ a {
     text-align: center;
     /* margin-top: 1rem; */
     height: 45rem;
-    font-family: var(--font-primary);
-    /* font-size: 3rem; */
+    /* font-family: var(--font-primary);
+    font-size: 3rem; */
 }
 
 .text-box__title {
@@ -108,7 +114,10 @@ a {
 
 .input-box__textarea {
     width: 90%;
-    /* text-align: center; */
+    font-size: 2rem;
+    text-align: left;
+    font-size: 2rem;
+    color: black;
     min-height: 45rem;
     border-radius: 14px;
     resize: none;

@@ -38,7 +38,7 @@
 
             <div class="button-box">
                 <button class="button-box__button" type="button" onclick="botonEncriptar()">Encriptar</button>
-                <button class="button-box__button" type="button" value="Desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
+                <button class="button-box__button" type="button" onclick="botonDesencriptar()">Desencriptar</button>
             </div>
 
         </section>
@@ -47,19 +47,15 @@
             
             <h2 class="text-box__title">Resultado</h2>
 
-            
-            <div id="advertencia" class="text-box">
-                <img class="img-ab" src="./img/ajustes.png" alt="Imagen ajustes">
-                <h3 class="text-h3">Ningún mensaje fue encontrado</h3>
-                <p class="text">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="text-box">
+                
+                <textarea class="input-box__textarea mensaje" placeholder="Ningun mensaje fue encontrado"></textarea>
+                
             </div>
-
             
-            <!-- <button id="btn-copiar" class="resultado__boton desactivado">Copiar</button> -->
-
-
-                <p  id="resultado" class="resultado__texto desactivado"></p>
-                <button class="button-box__button desactivado" type="button"  onclick="copiar()">Copiar</button>
+            <div class="button-box">
+                <button class="button-box__button" type="button"  onclick="copiar()">Copiar</button>
+            </div>
         </section>
 
     </main>

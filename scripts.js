@@ -1,51 +1,51 @@
-function encriptar() {
-    let texto = document.getElementById(".input-box__textarea").value;
-    let tituloMensaje = document.getElementById(".text-h3");
-    let parrafo = document.getElementById(".text");
-    let muñeco = document.getElementById(".img-ab");
+const inputTexto = document.querySelector(".input-box__textarea")
+const mensaje = document.querySelector(".mensaje")
 
-    let textoCifrado = texto
-        .replace(/e/gi, "enter")
-        .replace(/i/gi, "imes")
-        .replace(/a/gi, "ai")
-        .replace(/o/gi, "ober")
-        .replace(/u/gi, "ufat");
+//   `La letra "e" es convertida para "enter"`
+//   `La letra "i" es convertida para "imes"`
+//  `La letra "a" es convertida para "ai"`
+//    `La letra "o" es convertida para "ober"`
+//    `La letra "u" es convertida para "ufat"`
 
-    if (texto.length != 0) {
-        document.getElementById(".input-box__textarea").value = textoCifrado;
-        tituloMensaje.textContent = "Texto encriptado con éxito";
-        parrafo.textContent = "";
-        muñeco.src = "./img/encriptado.jpg";
-    } else {
-        muñeco.src = "./img/muñeco.png";
-        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-        swal("Ooops!", "Debes ingresar un texto", "warning");
-    }
+function botonEncriptar(){
+    const textoEncriptado = encriptar(inputTexto.value)
+    mensaje.value = textoEncriptado;
+    inputTexto.value = ""
 }
 
-function desencriptar() {
-    let texto = document.getElementById(".input-box__textarea").value;
-    let tituloMensaje = document.getElementById(".text-h3");
-    let parrafo = document.getElementById(".text");
-    let muñeco = document.getElementById(".img-ab");
+function encriptar(stringEncriptada){
+    let matrizCodigo = [["e", "enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase();
 
-    let textoCifrado = texto
-        .replace(/enter/gi, "e")
-        .replace(/imes/gi, "i")
-        .replace(/ai/gi, "a")
-        .replace(/ober/gi, "o")
-        .replace(/ufat/gi, "u");
-
-    if (texto.length != 0) {
-        document.getElementById(".input-box__textarea").value = textoCifrado;
-        tituloMensaje.textContent = "Texto desencriptado con éxito";
-        parrafo.textContent = "";
-        muñeco.src = "./img/desencriptado.jpg";
-    } else {
-        muñeco.src = "./img/ajustes.png";
-        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
-        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-        swal("Ooops!", "Debes ingresar un texto", "warning");
+    for( let i = 0; i < matrizCodigo.length; i++){        
+        if(stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+        }
     }
+    return stringEncriptada;
+}
+
+function botonDesencriptar(){
+    const textoEncriptado = desencriptar(inputTexto.value)
+    mensaje.value = textoEncriptado;
+    inputTexto.value = ""
+}
+
+function desencriptar(stringDesencriptada) {
+    let matrizCodigo = [["e", "enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for(let i=0; i < matrizCodigo.length; i++) {
+        if(stringDesencriptada.includes(matrizCodigo[i][1])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
+        }
+    }
+    return stringDesencriptada;
+}
+
+function copiar (){
+    mensaje.select()
+    navigator.clipboard.writeText(mensaje.value)
+    mensaje.value = ""
+    alert("Texto copiado correctamente")
 }

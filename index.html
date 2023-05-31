@@ -29,22 +29,16 @@
     <main class="main container">
         <section class="main__section">
             
-            <h2 class="text-box__title">Encriptador alura</h2>
+            <h2 class="text-box__title">Encriptador Alura</h2>
 
             
                 <div class="text-box">
                     <textarea class="input-box__textarea" placeholder="Ingrese el texto aquí..."></textarea>
                 </div>
-                
 
-           
             <div class="button-box">
-                <button class="button-box__button" type="button" 
-                    onclick="botonEncriptar()">Encriptar
-                </button>
-                <button class="button-box__button" type="button" 
-                    onclick="botonDesencriptar()">Desencriptar
-                </button>
+                <button class="button-box__button" type="button" onclick="botonEncriptar()">Encriptar</button>
+                <button class="button-box__button" type="button" value="Desencriptar" onclick="botonDesencriptar()">Desencriptar</button>
             </div>
 
         </section>
@@ -54,20 +48,22 @@
             <h2 class="text-box__title">Resultado</h2>
 
             
-            <div class="text-box">
-
-                <textarea class="input-box__textarea mensaje" placeholder="Ningun mensaje fue encontrado..."></textarea>
+            <div id="advertencia" class="text-box">
+                <img class="img-ab" src="./img/ajustes.png" alt="Imagen ajustes">
+                <h3 class="text-h3">Ningún mensaje fue encontrado</h3>
+                <p class="text">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
 
+            
+            <!-- <button id="btn-copiar" class="resultado__boton desactivado">Copiar</button> -->
 
-            <div class="button-box">
-                <button class="button-box__button button-box__button--copy" type="button"
-                    onclick="copiar()">Copiar
-                </button>
-            </div>
+
+                <p  id="resultado" class="resultado__texto desactivado"></p>
+                <button class="button-box__button desactivado" type="button"  onclick="copiar()">Copiar</button>
         </section>
 
     </main>
 </body>
 
+<script src="scripts.js"></script>
 </html>

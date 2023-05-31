@@ -25,6 +25,7 @@ body {
     min-height: 96.80vh;
     margin: 0 auto;
     background: #212121;
+    scroll-behavior: smooth;
     /* background-image: linear-gradient(80deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%)); */
     /* background-repeat: no-repeat; */
 }
@@ -125,12 +126,13 @@ a {
 
 .input-box__textarea {
     width: 90%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: left;
     font-size: 2rem;
     color: #ffffff;
     min-height: 45rem;
     border-radius: 14px;
+    font-family: var(--font-primary);
     resize: none;
     background-color: #212121;
     border: none;
@@ -151,22 +153,6 @@ a {
     /* padding-right: 1rem; */
 }
 
-.button-box__button {
-    /* border-radius: 1rem; */
-    /* color: var(--negro); */
-    /* font-size: 2.5rem; */
-    /* box-shadow: inset 0 0 0 0 var(--azul); */
-    /* transition: ease-out 0.3s; */
-    /* border: 1px solid rgba(0, 0, 0, 0.1); */
-    /* border-radius: .25rem; */
-    /* transition: all 250ms; */
-    /* outline: none; */
-    /* padding-right: 3rem;
-    margin-right: 1rem; */
-    /* cursor: pointer; */
-    /* margin: 2rem; */
-    /* padding: calc(.875rem - 1px) calc(1.5rem - 1px); */
-}
 
 .button-box__button {
     padding: 17px 40px;
@@ -205,11 +191,40 @@ a {
 .mensaje {
     width: 90%;
     /* text-align: center; */
-    background-image: url('/img/1691649.png');
+    background-image: url('/img/ajustes.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
-    line-height: 36px;
-    border-radius: 14px;
-    resize: none;
+    /* height: 36px; */
+    /* border-radius: 14px; */
+    /* resize: none; */
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-ab {
+    width: 15rem;
+}
+
+.text-h3 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.text {
+    font-family: var(--font-primary);
+    color: rgba(245, 245, 245, 0.5);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.desactivado {
+    display: none;
 }
